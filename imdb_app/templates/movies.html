@@ -1,0 +1,7 @@
+<h1> Welcome to the Movies Page </h1>
+<ul>
+{% for movie in movies %}
+    {% url "movie_detail" movie.id as movie_url %}
+    <li> <a href="{{movie_url}}"> {{ movie.title }}</a></li>
+{% endfor %}
+</ul>
