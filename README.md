@@ -1,5 +1,5 @@
 # IMDB
-Learning Django 
+Learning Django/ 
 To run migrations: 
   make migrations 
   migrate
