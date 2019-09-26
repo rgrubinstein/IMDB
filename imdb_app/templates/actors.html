@@ -1,6 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
 <h1>Welcome to the Actors Page! </h1>
 <ul>
 {% for actor in actors %}
     <li>{{ actor.first_name}} {{actor.last_name}} </li>
 {% endfor %}
 </ul>
+{% endblock %}

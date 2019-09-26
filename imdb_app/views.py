@@ -28,3 +28,10 @@ def movie_detail(request, movie_id):
     movie = get_object_or_404(Movie, pk=movie_id)
     actors = Actor.objects.filter(movies=movie_id)
     return HttpResponse(template.render({"movie": movie, "actors": actors}, request))
+
+
+def actor_detail(request, actor_id):
+    template = loader.get_template("actor_detail.html")
+    actor = get_object_or_404(Actor, pk=actor_id)
+    movies = Movie.objects.filter(actor=actor_id)
+    return HttpResponse(template.render({"actor": actor, "movies": movies}, request))

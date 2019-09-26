@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Welcome to the Actor Detail Page :D </h1>
+<h2>{{actor.first_name}} {{actor.last_name}}</h2>
+<ul>
+{% for movie in movies %}
+    <li>{{movie.title}} </li>
+{% endfor %}
+</ul>
+{% endblock %}

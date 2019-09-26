@@ -1,3 +1,5 @@
+{% extends "base.html" %}
+{% block content %}
 <h1> Welcome to the Movies Page </h1>
 <ul>
 {% for movie in movies %}
@@ -5,3 +7,4 @@
     <li> <a href="{{movie_url}}"> {{ movie.title }}</a></li>
 {% endfor %}
 </ul>
+{% endblock %}
