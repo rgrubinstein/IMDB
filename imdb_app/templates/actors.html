@@ -3,7 +3,8 @@
 <h1>Welcome to the Actors Page! </h1>
 <ul>
 {% for actor in actors %}
-    <li>{{ actor.first_name}} {{actor.last_name}} </li>
+    {% url "actor_detail" actor.id as actor_url %}
+    <li> <a href="{{actor_url}}">{{ actor.first_name}} {{actor.last_name}} </a></li>
 {% endfor %}
 </ul>
 {% endblock %}
